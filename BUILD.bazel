@@ -1,0 +1,13 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "bazel-workshop",
+    srcs = ["calculator.go"],
+    importpath = "github.com/LeoCBS/bazel-workshop",
+    visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "bazel-workshop_test",
+    srcs = ["calculator_test.go"],
+)
